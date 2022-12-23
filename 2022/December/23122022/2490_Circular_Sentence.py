@@ -54,5 +54,3 @@ class Solution:
                 if sentence[idx][-1] != sentence[idx + 1][0]:
                     return False
         return sentence[0][0] == sentence[-1][-1]
-
-

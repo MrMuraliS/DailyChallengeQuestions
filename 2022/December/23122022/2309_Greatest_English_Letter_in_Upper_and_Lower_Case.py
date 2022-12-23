@@ -40,4 +40,3 @@ class Solution:
             if letter.upper() in seen and letter.lower() in seen:
                 res = max(res, letter.upper())
         return res
-

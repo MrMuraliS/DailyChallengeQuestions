@@ -39,8 +39,7 @@ class Solution:
         count = 0
         for idx, word in enumerate(words):
             word = set(word)
-            for j in words[idx+1:]:
+            for j in words[idx + 1 :]:
                 if word == set(j):
                     count += 1
         return count
-

@@ -36,6 +36,7 @@ The only letter that appears twice is 'd' so we return 'd'.
 class Solution:
     def repeatedCharacter(self, s: str) -> str:
         from collections import defaultdict
+
         target = defaultdict(int)
 
         for item in s:

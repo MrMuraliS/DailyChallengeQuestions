@@ -35,7 +35,7 @@ Because distance[0] = 1, s is not a well-spaced string.
 
 
 class Solution:
-    def checkDistances(self, s: str, distance: List[int]) -> bool:
+    def checkDistances(self, s: str, distance: list[int]) -> bool:
         target = {}
         for x, y in enumerate(s):
             if y not in target:
@@ -44,4 +44,3 @@ class Solution:
                 if x - target[y] - 1 != distance[ord(y) - ord("a")]:
                     return False
         return True
-

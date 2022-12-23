@@ -34,9 +34,9 @@ class Solution:
     def numUniqueEmails(self, emails: List[str]) -> int:
         res = set()
         for email in emails:
-            tar = email.split('@')
-            tar[0] = tar[0].replace('.', '')
-            if '+' in tar[0]:
-                tar[0] = tar[0][:tar[0].find('+')]
+            tar = email.split("@")
+            tar[0] = tar[0].replace(".", "")
+            if "+" in tar[0]:
+                tar[0] = tar[0][: tar[0].find("+")]
             res.add("@".join(tar))
         return len(res)

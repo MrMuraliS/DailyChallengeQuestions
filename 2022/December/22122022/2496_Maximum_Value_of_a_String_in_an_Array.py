@@ -39,7 +39,8 @@ class Solution:
         target = 0
         for item in strs:
             if item.isdigit():
-                if int(item) > target: target = int(item)
+                if int(item) > target:
+                    target = int(item)
             else:
                 if len(item) > target:
                     target = len(item)

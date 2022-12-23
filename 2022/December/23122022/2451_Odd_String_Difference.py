@@ -33,6 +33,7 @@ Explanation: All the integer arrays are [0, 0] except for "bob", which correspon
 class Solution:
     def oddString(self, words: list[str]) -> str:
         import string
+
         alpha = {char: idx for idx, char in enumerate(string.ascii_lowercase)}
 
         tar = {}
@@ -46,4 +47,3 @@ class Solution:
                 tar[tuple(result)].append(item)
 
         return sorted(tar.items(), key=lambda x: len(x[1]))[0][1][0]
-

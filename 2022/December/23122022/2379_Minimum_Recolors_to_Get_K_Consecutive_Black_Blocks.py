@@ -36,8 +36,8 @@ class Solution:
     def minimumRecolors(self, blocks: str, k: int) -> int:
         val = None
         for idx in range(len(blocks) - k + 1):
-            text = blocks[idx:idx + k]
-            times = text.count('W')
+            text = blocks[idx : idx + k]
+            times = text.count("W")
 
             if val is None:
                 val = times
