@@ -28,10 +28,10 @@ Explanation: Split the string as follows ("ab", "cd").
 
 
 class Solution:
-
     def numSplits(self, s: str) -> int:
 
         from collections import Counter
+
         # counter = 0
         # for idx in range(len(s)):
         #     left = s[:idx+1]
