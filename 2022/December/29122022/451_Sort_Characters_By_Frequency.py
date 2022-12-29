@@ -32,6 +32,12 @@ Note that 'A' and 'a' are treated as two different characters.
 class Solution:
     def frequencySort(self, s: str) -> str:
         from collections import Counter
+
         dd = Counter(s)
 
-        return "".join([char * num for char, num in sorted(dd.items(), key=lambda x: x[1], reverse=True)])
+        return "".join(
+            [
+                char * num
+                for char, num in sorted(dd.items(), key=lambda x: x[1], reverse=True)
+            ]
+        )

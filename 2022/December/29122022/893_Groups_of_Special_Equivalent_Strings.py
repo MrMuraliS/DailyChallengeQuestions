@@ -40,9 +40,8 @@ class Solution:
     def numSpecialEquivGroups(self, words: list[str]) -> int:
         d = collections.defaultdict(int)
         for word in words:
-            even = ''.join(sorted(word[0::2]))
-            odd = ''.join(sorted(word[1::2]))
+            even = "".join(sorted(word[0::2]))
+            odd = "".join(sorted(word[1::2]))
             d[(even, odd)] += 1
 
         return len(d)
-

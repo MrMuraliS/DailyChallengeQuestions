@@ -36,4 +36,3 @@ class Solution:
         a1, a2, b1, b2 = int(a1), int(a2), int(b1), int(b2)
         result = [str(a1 * b1 - a2 * b2), "+", str(a1 * b2 + a2 * b1), "i"]
         return "".join(result)
-
