@@ -27,7 +27,9 @@ Explanation: The only word "havana" will be always suggested while typing the se
 
 
 class Solution:
-    def suggestedProducts(self, products: list[str], searchWord: str) -> list[list[str]]:
+    def suggestedProducts(
+        self, products: list[str], searchWord: str
+    ) -> list[list[str]]:
         phrase = ""
         data = []
         for letter in searchWord:

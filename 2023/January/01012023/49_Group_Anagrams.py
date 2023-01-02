@@ -26,6 +26,7 @@ Output: [["a"]]
 class Solution:
     def groupAnagrams(self, strs: list[str]) -> list[list[str]]:
         import collections
+
         ans = collections.defaultdict(list)
         for s in strs:
             ans[tuple(sorted(s))].append(s)
