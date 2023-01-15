@@ -7,9 +7,18 @@ Given a string array words, return the maximum value of length(word[i]) * length
 
 class Solution:
     def maxProduct(self, words: List[str]) -> int:
-        maxProduct = 0
-        for i in range(len(words)):
-            for j in range(i + 1, len(words)):
-                if not set(words[i]) & set(words[j]):
-                    maxProduct = max(maxProduct, len(words[i]) * len(words[j]))
-        return maxProduct
+        result = 0
+
+        def findDuplicates(word: set, word2: set):
+            for item in word:
+                if item in word2:
+                    return True
+            return False
+
+        for idx in range(len(words) - 1):
+            for j in range(idx + 1, len(words)):
+                if not findDuplicates(first := words[idx], second := words[j]):
+                    summing = len(first) * len(second)
+                    if result < summing:
+                        result = summing
+        return result
