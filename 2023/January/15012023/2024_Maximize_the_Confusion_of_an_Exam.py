@@ -12,14 +12,11 @@ Return the maximum number of consecutive 'T's or 'F's in the answer key after pe
 
 class Solution:
     def maxConsecutiveAnswers(self, answerKey: str, k: int) -> int:
-        l, d = 0, {"T": 0, "F": 0}  #   Ex: answerKey = TTFTTFTT
-        #                   01234567
+        l, d = 0, {"T": 0, "F": 0}
 
-        for r in range(len(answerKey)):  #   l    r      d        r-l+1
-            d[answerKey[r]] += 1  #  –––  –––  –––––––––   ––––––
-            #   0    0   {T:1,F:0}     1
-            if max(d.values()) < r - l - k + 1:  #   0    1   {T:2,F:0}     2
-                d[answerKey[l]] -= 1  #   0    2   {T:2,F:1}     3
-                l += 1  #   2    3   {T:3,F:1}     4
-                #   2    4   {T:4,F:1}     5
+        for r in range(len(answerKey)):
+            d[answerKey[r]] += 1
+            if max(d.values()) < r - l - k + 1:
+                d[answerKey[l]] -= 1
+                l += 1
         return r - l + 1
