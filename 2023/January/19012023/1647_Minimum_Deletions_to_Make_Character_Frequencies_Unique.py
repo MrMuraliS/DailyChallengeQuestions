@@ -12,26 +12,24 @@ The frequency of a character in a string is the number of times it appears in th
 
 class Solution:
     def minDeletions(self, s: str) -> int:
-        class Solution:
-            def minDeletions(self, s: str) -> int:
-                from collections import Counter
+        from collections import Counter
 
-                counter = list(Counter(s).values())
+        counter = list(Counter(s).values())
+        counter.sort(reverse=True)
+
+        count = 0
+        iteration = 0
+
+        while iteration < len(counter) - 1:
+            if counter[iteration] == counter[iteration + 1]:
+                count += 1
+                if counter[iteration + 1] > 1:
+                    counter[iteration + 1] = counter[iteration + 1] - 1
+                else:
+                    counter.pop(iteration + 1)
                 counter.sort(reverse=True)
+            else:
+                iteration += 1
+        print(counter)
 
-                count = 0
-                iteration = 0
-
-                while iteration < len(counter) - 1:
-                    if counter[iteration] == counter[iteration + 1]:
-                        count += 1
-                        if counter[iteration + 1] > 1:
-                            counter[iteration + 1] = counter[iteration + 1] - 1
-                        else:
-                            counter.pop(iteration + 1)
-                        counter.sort(reverse=True)
-                    else:
-                        iteration += 1
-                print(counter)
-
-                return count
+        return count
