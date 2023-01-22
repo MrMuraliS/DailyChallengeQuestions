@@ -1,5 +1,5 @@
 PS4='Executing: '
-set -x
+#set -x
 black . --exclude hackerrank.sh &&
 git add . &&
 TODAY=$(date +%Y-%m-%d-%H-%M-%S) &&
