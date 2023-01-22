@@ -3,5 +3,6 @@ PS4='Executing: '
 black . --exclude hackerrank.sh &&
 git add . &&
 TODAY=$(date +%Y-%m-%d-%H-%M-%S) &&
+echo $TODAY
 git commit -m "Hacker Rank Questions on $TODAY" &&
 git push
