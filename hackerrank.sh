@@ -8,4 +8,3 @@ set -x
 git commit -m "Committing changes on $TODAY"
 wait
 git push
-wc -l <<< "$(ls)"
