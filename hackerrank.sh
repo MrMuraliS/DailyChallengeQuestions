@@ -1,8 +1,7 @@
-PS4='Executing: '
-#set -x
+PS4='EXECUTING: '
+set -x
 black . --exclude hackerrank.sh &&
 git add . &&
 TODAY=$(date +%Y-%m-%d-%H-%M-%S) &&
-echo $TODAY
-git commit -m "Hacker Rank Questions on $TODAY" &&
+git commit -m "Committing changes on $TODAY" &&
 git push
