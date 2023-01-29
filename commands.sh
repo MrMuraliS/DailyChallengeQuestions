@@ -1,5 +1,4 @@
 #!/bin/bash -xe
-
 PS4="+ ${BASH_SOURCE} : ${LINENO} : "
 black . --exclude hackerrank.sh
 git add .
