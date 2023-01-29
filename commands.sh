@@ -1,6 +1,6 @@
 #!/bin/bash -x
 
-PS4="+ ${BASH_SOURCE} : $LINENO : "
+PS4="+ ${BASH_SOURCE} : ${LINENO} : "
 black . --exclude hackerrank.sh &&
 git add . &&
 TODAY=$(date +%Y-%m-%d-%H:%M:%S) &&
