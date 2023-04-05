@@ -45,5 +45,36 @@ num only consists of digits.
 
 
 class Solution:
-    def getMinSwaps(self, num: str, k: int) -> int:
-        pass
+    def getMinSwaps(self, orig: str, k: int) -> int:
+        def nextPermutation(nums):
+            i = len(nums) - 2
+
+            while i > -1 and nums[i] >= nums[i + 1]:
+                i -= 1
+
+            j = len(nums) - 1
+
+            while nums[j] <= nums[i]:
+                j -= 1
+
+            nums[i], nums[j] = nums[j], nums[i]
+            nums[i + 1 :] = reversed(nums[i + 1 :])
+            return nums
+
+        nums = list(orig)
+        res = None
+
+        for _ in range(k):
+            res = nextPermutation(nums)
+
+        ans = i = 0
+        # finding the number of swaps needed
+        while i < len(res) - 1:
+            if res[i] != orig[i]:
+                index = res.index(orig[i], i + 1)
+                res.insert(i, res.pop(index))
+                ans += index - i
+
+            i += 1
+
+        return ans
