@@ -42,3 +42,8 @@ Constraints:
 num only consists of digits.
 
 """
+
+
+class Solution:
+    def getMinSwaps(self, num: str, k: int) -> int:
+        pass
