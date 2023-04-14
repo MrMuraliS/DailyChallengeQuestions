@@ -23,7 +23,7 @@ Constraints:
 
 
 class Solution:
-    def dailyTemperatures(self, temperatures: List[int]) -> List[int]:
+    def dailyTemperatures(self, temperatures):
         n = len(temperatures)
         ans = [0] * n
         stack = []
@@ -32,4 +32,8 @@ class Solution:
                 idx = stack.pop()
                 ans[idx] = i - idx
             stack.append(i)
+            print(f"{stack=}, {ans=}")
         return ans
+
+
+print(Solution().dailyTemperatures([73, 74, 75, 71, 69, 72, 76, 73]))
