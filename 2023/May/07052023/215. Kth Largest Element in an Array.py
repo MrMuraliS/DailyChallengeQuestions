@@ -19,3 +19,11 @@ Constraints:
     -104 <= nums[i] <= 104
 
 """
+
+
+class Solution:
+    def findKthLargest(self, nums: List[int], k: int) -> int:
+        # nums = list(set(nums))
+        nums.sort()
+        print(nums)
+        return nums[-k]
