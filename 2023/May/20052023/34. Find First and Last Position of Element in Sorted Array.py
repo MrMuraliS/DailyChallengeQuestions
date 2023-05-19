@@ -23,3 +23,22 @@ Constraints:
     -109 <= target <= 109
 
 """
+
+
+class Solution:
+    def searchRange(self, nums: List[int], target: int) -> List[int]:
+        first = last = None
+        n = len(nums)
+
+        for idx in range(n):
+            if nums[idx] == target and first is None:
+                first = idx
+
+            if nums[-(idx + 1)] == target and last is None:
+                last = len(nums) - (idx + 1)
+
+            if first is not None and last is not None:
+                return [first, last]
+
+        else:
+            return [-1, -1]
