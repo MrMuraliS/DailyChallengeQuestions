@@ -22,3 +22,32 @@ Constraints:
 Follow up: Can you solve the problem without modifying the values in the list's nodes? (i.e., Only nodes themselves may be changed.)
 
 """
+
+
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def swapPairs(self, head: Optional[ListNode]) -> Optional[ListNode]:
+
+        values = []
+
+        while head:
+            values.append(head.val)
+            head = head.next
+
+        for idx in range(0, len(values) - 1, 2):
+            values[idx], values[idx + 1] = values[idx + 1], values[idx]
+
+        target = None
+        for item in values:
+            if target is None:
+                target = ListNode(item)
+                temp = target
+            else:
+                new = ListNode(item)
+                temp.next = new
+                temp = new
+        return target
