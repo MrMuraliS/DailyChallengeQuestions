@@ -35,3 +35,33 @@ Constraints:
 
 
 """
+
+
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def mergeKLists(self, lists: List[Optional[ListNode]]) -> Optional[ListNode]:
+        target = []
+
+        for item in lists:
+            temp = item
+            while temp:
+                target.append(temp.val)
+                temp = temp.next
+        target.sort()
+
+        data = None
+        temp = None
+
+        for val in target:
+            if data is None:
+                data = ListNode(val)
+                temp = data
+            else:
+                temp.next = ListNode(val)
+                temp = temp.next
+
+        return data
