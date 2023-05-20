@@ -24,3 +24,8 @@ Constraints:
     -104 <= xn <= 104
 
 """
+
+# Solution
+class Solution:
+    def myPow(self, x: float, n: int) -> float:
+        return x**n
