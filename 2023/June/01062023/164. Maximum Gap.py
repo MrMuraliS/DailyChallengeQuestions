@@ -25,9 +25,7 @@ Constraints:
 class Solution:
     def maximumGap(self, nums: List[int]) -> int:
         nums.sort()
-        max_diff = 0
-        for i in range(len(nums) - 1):
-            diff = nums[i + 1] - nums[i]
-            if diff > max_diff:
-                max_diff = diff
-        return max_diff
+        count = 0
+        for idx in range(len(nums) - 1):
+            count = max(nums[idx + 1] - nums[idx], count)
+        return count
