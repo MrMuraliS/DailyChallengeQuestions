@@ -33,8 +33,6 @@ class Solution:
 
 
 # Solution 2
-
-
 class Solution:
     def findPeakElement(self, nums: List[int]) -> int:
         # Binary Search
