@@ -36,6 +36,3 @@ class Solution:
         for i in range(len(nums)):
             ans.append(nums[nums[i]])
         return ans
-
-
-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
