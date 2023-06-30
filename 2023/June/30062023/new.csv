@@ -1,0 +1,4 @@
+CustomerID,Name,Email,Address,EffectiveStartDate,EffectiveEndDate,CurrentFlag
+1,John Doe,john.doe@example.com,789 NEW,2023-07-01,9999-12-31,Y
+2,Jane Smith,jane.smith@example.com,555 NEW,2024-01-01,9999-12-31,Y
+3,Bob Johnson,b.johnson@example.com,369 NEW,2023-07-01,9999-12-31,Y
