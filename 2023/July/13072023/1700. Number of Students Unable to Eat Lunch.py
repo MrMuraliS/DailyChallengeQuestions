@@ -39,24 +39,11 @@ Constraints:
 
 
 class Solution:
-    def countStudents(self, students: list[int], sandwiches: list[int]) -> int:
-        # class Solution:
-        #     def countStudents(self, students: List[int], sandwiches: List[int]) -> int:
-        #         while students:
-        #             if students[0] == sandwiches[0]:
-        #                 students, sandwiches = students[1:], sandwiches[1:]
-        #             else:
-        #                 students = students[1:] + [students[0]]
-        #             if len(set(students)) != len(set(sandwiches)) and students[0] != sandwiches[0]:
-        #                 return len(students)
-        #         return 0
-
-        class Solution:
-            def countStudents(self, students: List[int], sandwiches: List[int]) -> int:
-                student_count = Counter(students)
-                for sandwich in sandwiches:
-                    if student_count[sandwich] > 0:
-                        student_count[sandwich] -= 1
-                    else:
-                        return student_count[not sandwich]
-                return 0
+    def countStudents(self, students: List[int], sandwiches: List[int]) -> int:
+        student_count = Counter(students)
+        for sandwich in sandwiches:
+            if student_count[sandwich] > 0:
+                student_count[sandwich] -= 1
+            else:
+                return student_count[not sandwich]
+        return 0
