@@ -1,8 +1,8 @@
-def foo():
-    try:
-        print(2)
-    finally:
-        print(9)
+name = "Sara"
+age = 28
+income = 65000.00
+is_married = False
 
-
-foo()
+print(
+    f"{name} is {age} years old and makes {income} per year. They are {'married' if is_married else 'single'}"
+)
