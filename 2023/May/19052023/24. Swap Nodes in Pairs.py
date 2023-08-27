@@ -31,7 +31,6 @@ Follow up: Can you solve the problem without modifying the values in the list's 
 #         self.next = next
 class Solution:
     def swapPairs(self, head: Optional[ListNode]) -> Optional[ListNode]:
-
         values = []
 
         while head:

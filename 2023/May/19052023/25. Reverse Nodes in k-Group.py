@@ -35,6 +35,7 @@ Follow-up: Can you solve the problem in O(1) extra memory space?
 
 # Solution
 
+
 # Definition for singly-linked list.
 # class ListNode:
 #     def __init__(self, val=0, next=None):

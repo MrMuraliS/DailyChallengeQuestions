@@ -24,7 +24,6 @@ Constraints:
 
 class Solution:
     def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:
-
         for mat in matrix:
             if mat[-1] >= target:
                 return target in mat

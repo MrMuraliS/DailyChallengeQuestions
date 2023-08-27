@@ -47,6 +47,7 @@ Notes:
     Your code should preferably run in O(n) time and use only O(1) memory.
 """
 
+
 # Solution 1
 # O(n) time | O(1) space
 class Solution:

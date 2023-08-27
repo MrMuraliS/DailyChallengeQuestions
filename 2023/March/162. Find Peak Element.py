@@ -26,6 +26,7 @@ Constraints:
 
 """
 
+
 # Solution 1
 class Solution:
     def findPeakElement(self, nums: List[int]) -> int:

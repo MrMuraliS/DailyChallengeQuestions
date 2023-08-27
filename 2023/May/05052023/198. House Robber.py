@@ -23,6 +23,7 @@ Constraints:
 
 """
 
+
 # Solution 1
 class Solution:
     def rob(self, nums: List[int]) -> int:

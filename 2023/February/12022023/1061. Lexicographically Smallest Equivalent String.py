@@ -44,7 +44,6 @@ s1, s2, and baseStr consist of lowercase English letters from 'a' to 'z'.
 
 class Solution:
     def smallestEquivalentString(self, s1: str, s2: str, baseStr: str) -> str:
-
         UF = {}
 
         def find(x):

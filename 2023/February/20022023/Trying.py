@@ -1,5 +1,4 @@
 class MyClass:
-
     x = 0
 
     def __init__(self, age):

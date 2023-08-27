@@ -41,6 +41,7 @@ Constraints:
 
 """
 
+
 # Solution 1
 class Solution:
     def countOperationsToEmptyArray(self, nums: List[int]) -> int:
